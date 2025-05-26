@@ -1,0 +1,33 @@
+{
+  "app": {
+    "packageName": "com.ss.android.ugc.aweme",
+    "name": "抖音"
+  },
+  "tasks": [
+    {
+      "id": "launch_douyin",
+      "type": "launch_app",
+      "packageName": "com.ss.android.ugc.aweme",
+      "description": "启动抖音",
+      "priority": 1,
+      "isBlocking": true
+    },
+    {
+      "id": "wait_for_home",
+      "type": "delay",
+      "duration": 3000,
+      "description": "等待抖音加载",
+      "priority": 2,
+      "isBlocking": true
+    },
+    {
+      "id": "click_home_tab",
+      "type": "click",
+      "targetId": "com.ss.android.ugc.aweme:id/e2a",
+      "description": "点击首页标签",
+      "priority": 3,
+      "isBlocking": true,
+      "waitAfter": 1000
+    }
+  ]
+}
